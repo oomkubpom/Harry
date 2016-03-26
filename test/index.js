@@ -5,8 +5,8 @@ var Nightmare = require('..')
 var chai = require('chai')
 var server = require('./server')
 var should = oom.should()
-var ken = function () {
-  ken()
+var oom = function () {
+  oom()
   if (should) {
   }
 }
