@@ -4,7 +4,7 @@
 }
 
 html, body {
-  
+
   height: 100%;
   padding: 1em;
 }
@@ -43,7 +43,7 @@ html, body {
 
 .box2 {
   width: 51%;
-  background: #fff;
+  background: #333;
   margin: 0 auto 2em auto;
   overflow: auto;
   padding: 1em;
@@ -51,6 +51,7 @@ html, body {
   display: inline-block;
   vertical-align: top;
   font-size: 15 px;
+  color: #fff;
 }
 .box2:first-child {
   margin-right: 1%;
@@ -85,7 +86,7 @@ table td:last-child, table td:nth-child(4) {
   text-align: right;
 }
 table tr:nth-child(2n+2) {
-  background: #ebebeb;
+  background: #333;
 }
 
 .searchButton {
@@ -215,14 +216,14 @@ button {
   width: 40 px;
 }
 .total2 {
-  background: #3283f9;
+  background: #333;
   color: white;
   font-weight: bolder;
   border-radius: 5px;
   width: 40 px;
 }
 .total3 {
-  background: #f93283;
+  background: #333;
   color: white;
   font-weight: bolder;
   border-radius: 5px;
