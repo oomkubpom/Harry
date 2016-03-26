@@ -23,7 +23,7 @@ eppingList.controller('index', ['$scope', function ($scope) {
       }
       $scope.num = numproduct
     }
-    $scope.getDiscount($scope.num)
+    $scope.getDisc($scope.num)
   }
 
   $scope.clear = function (list) {
@@ -32,7 +32,7 @@ eppingList.controller('index', ['$scope', function ($scope) {
   }
   $scope.add = function (ep, name) {
     if (check($scope.list, ep)) {
-      var index = findArrBook($scope.list, ep)
+      var index = findbook($scope.list, ep)
       $scope.list[index].num += 1
     } else {
       var data = {
@@ -60,7 +60,7 @@ eppingList.controller('index', ['$scope', function ($scope) {
       }
       $scope.num = numproduct
     }
-    $scope.getDiscount($scope.num)
+    $scope.getDisc($scope.num)
   }
   var check = function (list, ep) {
     for (var i = 0; i < list.length; i++) {
@@ -69,14 +69,14 @@ eppingList.controller('index', ['$scope', function ($scope) {
       }
     }
   }
-  var findArrBook = function (list, ep) {
+  var findbook = function (list, ep) {
     for (var i = 0; i < list.length; i++) {
       if (list[i].ep === ep) {
         return i
       }
     }
   }
-  $scope.getDiscount = function (num) {
+  $scope.getDisc = function (num) {
     $scope.sell = 0
     var countlist = 0
     var exit = 0
