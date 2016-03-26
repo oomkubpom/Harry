@@ -38,12 +38,12 @@
 		<div class="box2" id="shopping-list">
 		    <div class="list">
 		      <table border="0" cellspacing="0">
-		        <tr class="table-header">
+		      <!----------------  <tr class="table-header">
 		          <td class="left">Book Name</td>
 		          <td>Amount</td>
 		          <td class="center">Price</td>
 		          <td class="center">Delete</td>
-		        </tr>
+		        </tr>------------>
 		        <tr ng-repeat="item in list">
 		          <td>{{item.name}}</td>
 		          <td class="center">{{item.amount}}</td>
@@ -51,7 +51,7 @@
 		          <td><button class="btn btn-danger glyphicon glyphicon-trash" ng-click="remove(item)"></button></td>
 		        </tr>
 		      </table>
-		      <div ng-hide="list.length" class="center">Empty.</div>
+		    <!----------------  <div ng-hide="list.length" class="center">Empty.</div> ----------->
 		      <div class="cost cf">
 		        <span class="left">Total Cost</span>
 		        <span class="right total" ng-class="{total: length!==0}">{{getTotal() | currency}}</span>
