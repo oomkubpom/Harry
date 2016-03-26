@@ -19,40 +19,41 @@
 		<div class="container-fluid" ng-controller="index">
       <h1>บ้านนายจิน</h1>
       <br>
-		 	<div class="box" id="shopping-list">
+		 	<div class="box" id="book-list">
 			    <br><br>
 			    <div>
-			    	<img src="img/1.jpg" width="135" height="195" class="book1 bb" ng-click="addItem(1,'Harry Potter and the Philosophers Stone')">
-            <img src="img/2.jpg" width="135" height="195" class="book2 bb" ng-click="addItem(2,'Harry Potter and the Chamber of Secrets')">
-            <img src="img/3.png" width="135" height="195" class="book3 bb" ng-click="addItem(3,'Harry Potter and the Prisoner of Azkaban')">
-            <img src="img/4.jpg" width="135" height="195" class="book4 bb" ng-click="addItem(4,'Harry Potter and the Goblet of Fire')">
-            <img src="img/5.jpg" width="135" height="195" class="book5 bb" ng-click="addItem(5,'Harry Potter and the Order of the Phoenix')">
-            <img src="img/6.png" width="135" height="195" class="book6 bb" ng-click="addItem(6,'Harry Potter and the Half-Blood Prince')">
-            <img src="img/7.jpg" width="135" height="195" class="book7 bb" ng-click="addItem(7,'Harry Potter and the Deathly Hallows')">
+			    	<img src="img/1.jpg" width="135" height="195" class="book1 bb" ng-click="add(1,'Harry Potter and the Philosophers Stone')">
+            <img src="img/2.jpg" width="135" height="195" class="book2 bb" ng-click="add(2,'Harry Potter and the Chamber of Secrets')">
+            <img src="img/3.png" width="135" height="195" class="book3 bb" ng-click="add(3,'Harry Potter and the Prisoner of Azkaban')">
+            <img src="img/4.jpg" width="135" height="195" class="book4 bb" ng-click="add(4,'Harry Potter and the Goblet of Fire')">
+            <img src="img/5.jpg" width="135" height="195" class="book5 bb" ng-click="add(5,'Harry Potter and the Order of the Phoenix')">
+            <img src="img/6.png" width="135" height="195" class="book6 bb" ng-click="add(6,'Harry Potter and the Half-Blood Prince')">
+            <img src="img/7.jpg" width="135" height="195" class="book7 bb" ng-click="add(7,'Harry Potter and the Deathly Hallows')">
 			    </div>
 			</div>
       <br>
-		<div class="box2" id="shopping-list">
+		<div class="box2" id="book-list">
 		    <div class="list">
 		      <table border="0" cellspacing="0">
 		        <tr ng-repeat="item in list">
 		          <td>{{item.name}}</td>
-		          <td class="center">{{item.amount}}</td>
-		          <td>{{item.amount * 100}}</td>
+		          <td class="center">{{item.num}}</td>
+		          <td>{{item.num * 100}}</td>
 		          <td><button class="btn btn-danger glyphicon glyphicon-trash" ng-click="remove(item)"></button></td>
 		        </tr>
 		      </table>
 		      <div class="cost cf">
 		        <span class="left">ราคา</span>
-		        <span class="right total" ng-class="{total: length!==0}">{{getTotal() | currency}}</span>
+		        <span class="right t" ng-class="{t: length!==0}">{{gett() | currency}}</span>
 		      </div>
           <div class="cost cf">
             <span class="left">ส่วนลด</span>
-            <span class="right" ng-class="{total2: length!==0}">{{sell | currency}}</span>
+            <span class="right" ng-class="{t2: length!==0}">{{sell | currency}}</span>
+            <!-- <span class="right" ng-class="{t: length!==0}">{{getDiscount() | currency}}</span> -->
           </div>
           <div class="cost cf">
 		        <span class="left">ราคาหลังหักส่วนลด</span>
-            <span class="right" ng-class="{total3: length!==0}">{{getTotal() - sell | currency}}</span>
+            <span class="right" ng-class="{t3: length!==0}">{{gett() - sell | currency}}</span>
 		      </div>
 		    </div>
 		  </div>
