@@ -34,7 +34,6 @@
       <br>
 		<div class="box2" id="book-list">
 		    <div class="list">
-		      
 		      <div class="cost cf">
 		        <span class="left">ราคา</span>
 		        <span class="right t" ng-class="{t: length!==0}">{{gett() | currency}}</span>
@@ -48,6 +47,14 @@
 		        <span class="left">ราคาหลังหักส่วนลด</span>
             <span class="right" ng-class="{t3: length!==0}">{{gett() - sell | currency}}</span>
 		      </div>
+          <table border="0" cellspacing="0">
+		        <tr ng-repeat="item in list">
+		          <td>{{item.name}}</td>
+		          <td class="center">{{item.num}}</td>
+		          <td>{{item.num * 100}}</td>
+		          <td><button class="btn btn-danger glyphicon glyphicon-trash" ng-click="remove(item)"></button></td>
+		        </tr>
+		      </table>
 		    </div>
 		  </div>
 </html>
