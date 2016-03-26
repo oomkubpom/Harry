@@ -27,12 +27,12 @@ describe('TEST Buy Harry Potter', function () {
     })
     it('ซื้อเล่ม 1 จำนวน 2 เล่ม ส่วนลดต้องเท่ากับ 0', function * () {
       var case1 = yield nightmare
-        .goto('http://localhost:6000')
+        .goto('http://localhost:5000')
         .wait(2000)
         .click('.bookNo1')
         .click('.bookNo1')
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('0.00')
@@ -46,7 +46,7 @@ describe('TEST Buy Harry Potter', function () {
         .wait(1000)
         .click('.bookNo2')
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('20.00')
@@ -61,7 +61,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo2')
         .click('.bookNo2')
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('40.00')
@@ -78,7 +78,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo4')
         .click('.bookNo4')
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('60.00')
@@ -92,7 +92,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo4')
         .wait(1000)
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('60.00')
@@ -113,7 +113,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo1')
         .wait(1000)
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('0.00')
@@ -127,7 +127,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo3')
         .wait(1000)
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('60.00')
@@ -142,7 +142,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo4')
         .wait(1000)
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('120.00')
@@ -158,7 +158,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo5')
         .wait(1000)
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('200.00')
@@ -175,7 +175,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo6')
         .wait(1000)
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('300.00')
@@ -193,7 +193,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo7')
         .wait(1000)
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('420.00')
@@ -220,7 +220,7 @@ describe('TEST Buy Harry Potter', function () {
         .click('.bookNo4')
         .wait(1000)
         .evaluate(function () {
-          this.price = document.querySelector('.total2').innerHTML
+          this.price = document.querySelector('.t2').innerHTML
           return this.price.substr(1, this.price.length - 1)
         })
       case1.should.equal('320.00')
