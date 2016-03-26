@@ -1,0 +1,56 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  background: #333;
+  text-align: center;
+  padding-top: 0em;
+}
+
+h1 {
+  font-size: 4em;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  padding: .25em 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+}
+h1:before, h1:after {
+  content: "fancy";
+  position: absolute;
+  color: transparent;
+  display: block;
+}
+h1:before {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  width: 337px;
+  height: 128px;
+  top: -12px;
+  left: 5px;
+}
+h1:after {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding: inherit;
+  width: 199px;
+  height: 112px;
+  top: -19px;
+  left: 10px;
+}
+h2 {
+  font-size: 2em;
+
+  padding: .25em 1em;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+}
