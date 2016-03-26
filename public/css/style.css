@@ -168,17 +168,14 @@ input[type='checkbox'] {
   padding: 0.2em;
   font-size: 1em;
 }
-
 button.clear {
-  background: #3f5872;
-  border-bottom: 4px solid #2b3c4e;
+  background: #333;
+  border-bottom: 4px solid #333;
 }
-
 button.clear:hover {
-  background: #384e65;
-  border-bottom: 2px solid #2b3c4e;
+  background: #333;
+  border-bottom: 2px solid #333;
 }
-
 button {
   margin: 0.25em 0;
   display: block;
