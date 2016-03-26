@@ -13,11 +13,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/head.css">
-
   </head>
-
   <body>
-
     <html ng-app="root">
 		<div class="container-fluid" ng-controller="index">
       <h1>บ้านนายจิน</h1>
@@ -38,12 +35,6 @@
 		<div class="box2" id="shopping-list">
 		    <div class="list">
 		      <table border="0" cellspacing="0">
-		      <!----------------  <tr class="table-header">
-		          <td class="left">Book Name</td>
-		          <td>Amount</td>
-		          <td class="center">Price</td>
-		          <td class="center">Delete</td>
-		        </tr>------------>
 		        <tr ng-repeat="item in list">
 		          <td>{{item.name}}</td>
 		          <td class="center">{{item.amount}}</td>
@@ -51,7 +42,6 @@
 		          <td><button class="btn btn-danger glyphicon glyphicon-trash" ng-click="remove(item)"></button></td>
 		        </tr>
 		      </table>
-		    <!----------------  <div ng-hide="list.length" class="center">Empty.</div> ----------->
 		      <div class="cost cf">
 		        <span class="left">ราคา</span>
 		        <span class="right total" ng-class="{total: length!==0}">{{getTotal() | currency}}</span>
@@ -59,14 +49,11 @@
           <div class="cost cf">
             <span class="left">ส่วนลด</span>
             <span class="right" ng-class="{total2: length!==0}">{{sell | currency}}</span>
-            <!-- <span class="right" ng-class="{total: length!==0}">{{getDiscount() | currency}}</span> -->
           </div>
           <div class="cost cf">
 		        <span class="left">ราคาหลังหักส่วนลด</span>
             <span class="right" ng-class="{total3: length!==0}">{{getTotal() - sell | currency}}</span>
 		      </div>
-          <!-- <button class="clear" ng-click="getDiscount()">Cal Discout</button> -->
-		      <!-- <button class="clear" ng-click="clearAll(list)">Clear Shopping List</button> -->
 		    </div>
 		  </div>
 </html>
