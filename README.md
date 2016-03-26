@@ -2,7 +2,7 @@
 $ npm install
 
 # run 
-$ sudo npm start
+$ npm start
 
 # test
 $ npm test
