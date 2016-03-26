@@ -2,7 +2,7 @@
 require('mocha-generators').install()
 
 var Nightmare = require('..')
-var oom = require('oom')
+var chai = require('chai')
 var server = require('./server')
 var should = oom.should()
 var ken = function () {
