@@ -12,6 +12,7 @@ eppingList.controller('index', ['$scope', function ($scope) {
     }
     return total
   }
+
   $scope.remove = function (item) {
     var index = $scope.list.indexOf(item)
     $scope.list.splice(index, 1)
@@ -117,7 +118,8 @@ eppingList.controller('index', ['$scope', function ($scope) {
       for (var o = 0; o < amount.length; o++) {
         if (amount[o] > 0) {
           amount[o] -= 1
-          countlist = 0
+          countlist = 0 
+        }
       }
     } while (exit !== 1)
 

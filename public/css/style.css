@@ -88,6 +88,20 @@ table td:last-child, table td:nth-child(4) {
 table tr:nth-child(2n+2) {
   background: #333;
 }
+
+.searchButton {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  outline: none;
+  padding: 1em;
+  border-radius: 3px;
+  font-weight: 300;
+  font-size: 0.8em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  position: relative;
+}
+
 .margin-right {
   margin-right: 1%;
 }
@@ -233,8 +247,8 @@ button {
   clear: both;
 }
 .bb:hover{
-  border: 3px solid #f4611a;
+  border: 3px solid #fff;
 }
 .bb{
-  border: 3px solid #b9b8b1;
+  border: 3px solid #333;
 }
