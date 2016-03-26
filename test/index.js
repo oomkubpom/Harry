@@ -2,20 +2,20 @@
 require('mocha-generators').install()
 
 var Nightmare = require('..')
-var chai = require('chai')
+var oom = require('oom')
 var server = require('./server')
-var should = chai.should()
-var koy = function () {
-  koy()
+var should = oom.should()
+var ken = function () {
+  ken()
   if (should) {
   }
 }
-describe('TEST Buy Harry Potter Book', function () {
+describe('TEST Buy Harry Potter', function () {
   before(function (done) {
     server.listen(7500, done)
   })
 
-  describe('Test buy Harry Potter Book', function () {
+  describe('Test buy Harry Potter', function () {
     var nightmare
 
     beforeEach(function () {
@@ -27,10 +27,10 @@ describe('TEST Buy Harry Potter Book', function () {
     })
     it('ซื้อเล่ม 1 จำนวน 2 เล่ม ส่วนลดต้องเท่ากับ 0', function * () {
       var case1 = yield nightmare
-        .goto('http://localhost:5000')
+        .goto('http://localhost:6000')
         .wait(2000)
-        .click('.book1')
-        .click('.book1')
+        .click('.bookNo1')
+        .click('.bookNo1')
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
           return this.price.substr(1, this.price.length - 1)
@@ -41,10 +41,10 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book1')
+        .click('.bookNo1')
+        .click('.bookNo1')
         .wait(1000)
-        .click('.book2')
+        .click('.bookNo2')
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
           return this.price.substr(1, this.price.length - 1)
@@ -55,11 +55,11 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book1')
+        .click('.bookNo1')
+        .click('.bookNo1')
         .wait(1000)
-        .click('.book2')
-        .click('.book2')
+        .click('.bookNo2')
+        .click('.bookNo2')
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
           return this.price.substr(1, this.price.length - 1)
@@ -70,13 +70,13 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book3')
-        .click('.book3')
-        .click('.book3')
+        .click('.bookNo3')
+        .click('.bookNo3')
+        .click('.bookNo3')
         .wait(1000)
-        .click('.book4')
-        .click('.book4')
-        .click('.book4')
+        .click('.bookNo4')
+        .click('.bookNo4')
+        .click('.bookNo4')
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
           return this.price.substr(1, this.price.length - 1)
@@ -87,9 +87,9 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book2')
-        .click('.book4')
+        .click('.bookNo1')
+        .click('.bookNo2')
+        .click('.bookNo4')
         .wait(1000)
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
@@ -101,16 +101,16 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
         .wait(1000)
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
@@ -122,9 +122,9 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book2')
-        .click('.book3')
+        .click('.bookNo1')
+        .click('.bookNo2')
+        .click('.bookNo3')
         .wait(1000)
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
@@ -136,10 +136,10 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book2')
-        .click('.book3')
-        .click('.book4')
+        .click('.bookNo1')
+        .click('.bookNo2')
+        .click('.bookNo3')
+        .click('.bookNo4')
         .wait(1000)
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
@@ -151,11 +151,11 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book2')
-        .click('.book3')
-        .click('.book4')
-        .click('.book5')
+        .click('.bookNo1')
+        .click('.bookNo2')
+        .click('.bookNo3')
+        .click('.bookNo4')
+        .click('.bookNo5')
         .wait(1000)
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
@@ -167,12 +167,12 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book2')
-        .click('.book3')
-        .click('.book4')
-        .click('.book5')
-        .click('.book6')
+        .click('.bookNo1')
+        .click('.bookNo2')
+        .click('.bookNo3')
+        .click('.bookNo4')
+        .click('.bookNo5')
+        .click('.bookNo6')
         .wait(1000)
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
@@ -184,13 +184,13 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book2')
-        .click('.book3')
-        .click('.book4')
-        .click('.book5')
-        .click('.book6')
-        .click('.book7')
+        .click('.bookNo1')
+        .click('.bookNo2')
+        .click('.bookNo3')
+        .click('.bookNo4')
+        .click('.bookNo5')
+        .click('.bookNo6')
+        .click('.bookNo7')
         .wait(1000)
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
@@ -202,22 +202,22 @@ describe('TEST Buy Harry Potter Book', function () {
       var case1 = yield nightmare
         .goto('http://localhost:5000')
         .wait(2000)
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book1')
-        .click('.book2')
-        .click('.book2')
-        .click('.book2')
-        .click('.book2')
-        .click('.book2')
-        .click('.book3')
-        .click('.book3')
-        .click('.book3')
-        .click('.book3')
-        .click('.book4')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo1')
+        .click('.bookNo2')
+        .click('.bookNo2')
+        .click('.bookNo2')
+        .click('.bookNo2')
+        .click('.bookNo2')
+        .click('.bookNo3')
+        .click('.bookNo3')
+        .click('.bookNo3')
+        .click('.bookNo3')
+        .click('.bookNo4')
         .wait(1000)
         .evaluate(function () {
           this.price = document.querySelector('.total2').innerHTML
