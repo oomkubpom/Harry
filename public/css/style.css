@@ -56,13 +56,6 @@ html, body {
 .box2:first-child {
   margin-right: 1%;
 }
-
-h1 {
-
-  text-align: center;
-  margin: 1em 0;
-}
-
 table {
   border: none;
   outline: none;
