@@ -25,7 +25,7 @@ describe('TEST Buy Harry Potter', function () {
     afterEach(function * () {
       yield nightmare.end()
     })
-    it('ซื้อเล่ม 1 จำนวน 2 เล่ม ส่วนลดต้องเท่ากับ 0', function * () {
+    it('ซื้อเล่ม 1 จำนวน 2 เล่ม ส่วนลด 0', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -37,7 +37,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('0.00')
     })
-    it('ซื้อเล่ม 1 จำนวน 2 เล่ม, ซื้อเล่ม 2 จำนวน 1 เล่ม ส่วนลดต้องเท่ากับ 20', function * () {
+    it('ซื้อเล่ม 1 จำนวน 2 เล่ม, ซื้อเล่ม 2 จำนวน 1 เล่ม ส่วนลด 20', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -51,7 +51,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('20.00')
     })
-    it('ซื้อเล่ม 1 จำนวน 2 เล่ม, ซื้อเล่ม 2 จำนวน 2 เล่ม ส่วนลดต้องเท่ากับ 20', function * () {
+    it('ซื้อเล่ม 1 จำนวน 2 เล่ม, ซื้อเล่ม 2 จำนวน 2 เล่ม ส่วนลดต้อง 20', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -66,7 +66,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('40.00')
     })
-    it('ซื้อเล่ม 3 จำนวน 3 เล่ม, ซื้อเล่ม 4 จำนวน 3 เล่ม ส่วนลดต้องเท่ากับ 60', function * () {
+    it('ซื้อเล่ม 3 จำนวน 3 เล่ม, ซื้อเล่ม 4 จำนวน 3 เล่ม ส่วนลด 60', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -83,7 +83,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('60.00')
     })
-    it('ซื้อเล่ม 1 จำนวน 1 เล่ม, ซื้อเล่ม 2 จำนวน 1 เล่ม, ซื้อเล่ม 4 จำนวน 1 เล่ม ส่วนลดต้องเท่ากับ 60', function * () {
+    it('ซื้อเล่ม 1 จำนวน 1 เล่ม, ซื้อเล่ม 2 จำนวน 1 เล่ม, ซื้อเล่ม 4 จำนวน 1 เล่ม ส่วนลด 60', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -97,7 +97,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('60.00')
     })
-    it('ซื้อเล่ม 1 จำนวน 10 เล่ม ส่วนลดต้องเท่ากับ 0', function * () {
+    it('ซื้อเล่ม 1 จำนวน 10 เล่ม ส่วนลด 0', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -118,7 +118,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('0.00')
     })
-    it('ซื้อเล่ม 1-3 ภาคละ 1 เล่ม ส่วนลดต้องเท่ากับ 60', function * () {
+    it('ซื้อเล่ม 1-3 ภาคละ 1 เล่ม ส่วนลด 60', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -132,7 +132,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('60.00')
     })
-    it('ซื้อเล่ม 1-4 ภาคละ 1 เล่ม ส่วนลดต้องเท่ากับ 120', function * () {
+    it('ซื้อเล่ม 1-4 ภาคละ 1 เล่ม ส่วนลด 120', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -147,7 +147,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('120.00')
     })
-    it('ซื้อเล่ม 1-5 ภาคละ 1 เล่ม ส่วนลดต้องเท่ากับ 200', function * () {
+    it('ซื้อเล่ม 1-5 ภาคละ 1 เล่ม ส่วนลด 200', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -163,7 +163,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('200.00')
     })
-    it('ซื้อเล่ม 1-6 ภาคละ 1 เล่ม ส่วนลดต้องเท่ากับ 300', function * () {
+    it('ซื้อเล่ม 1-6 ภาคละ 1 เล่ม ส่วนลด 300', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -180,7 +180,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('300.00')
     })
-    it('ซื้อทุกเล่ม ภาคละ 1 เล่ม ส่วนลดต้องเท่ากับ 420', function * () {
+    it('ซื้อทุกเล่ม ภาคละ 1 เล่ม ส่วนลด 420', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
@@ -198,7 +198,7 @@ describe('TEST Buy Harry Potter', function () {
         })
       case1.should.equal('420.00')
     })
-    it('ซื้อเล่ม 1 จำนวน 6 เล่ม, ซื้อเล่ม 2 จำนวน 5 เล่ม, ซื้อเล่ม 3 จำนวน 4 เล่ม, ซื้อเล่ม 4 จำนวน 1 เล่ม ส่วนลดต้องเท่ากับ 320', function * () {
+    it('ซื้อเล่ม 1 จำนวน 6 เล่ม, ซื้อเล่ม 2 จำนวน 5 เล่ม, ซื้อเล่ม 3 จำนวน 4 เล่ม, ซื้อเล่ม 4 จำนวน 1 เล่ม ส่วนลด 320', function * () {
       var case1 = yield nightmare
         .goto('http://localhost:6000')
         .wait(2000)
