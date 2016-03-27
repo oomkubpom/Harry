@@ -8,11 +8,11 @@ var oom = function () {
   if (should) {
   }
 }
-describe('TEST Buy Harry Potter', function () {
+describe('TEST Harry Potter', function () {
   before(function (done) {
     server.listen(7500, done)
   })
-  describe('Test buy Harry Potter', function () {
+  describe('Test Harry Potter', function () {
     var nightmare
     beforeEach(function () {
       nightmare = Nightmare()
