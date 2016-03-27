@@ -228,20 +228,19 @@ button {
   }
 }
 /* Clearfix */
-.cf:before,
-.cf:after {
+.aom:before,
+.aom:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-
-.cf:after {
+.aom:after {
   clear: both;
 }
-.bb:hover{
+.cc:hover{
   border: 3px solid #fff;
 }
-.bb{
+.cc{
   border: 3px solid #333;
 }

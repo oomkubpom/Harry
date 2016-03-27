@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Buy book</title>
+    <title>Buy Book</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	  <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
@@ -22,28 +22,28 @@
 		 	<div class="box" id="book-list">
 			    <br><br>
 			    <div>
-			    	<img src="img/1.jpg" width="135" height="195" class="bookNo1 bb" ng-click="add(1,'Harry Potter and the Philosophers Stone')">
-            <img src="img/2.jpg" width="135" height="195" class="bookNo2 bb" ng-click="add(2,'Harry Potter and the Chamber of Secrets')">
-            <img src="img/3.png" width="135" height="195" class="bookNo3 bb" ng-click="add(3,'Harry Potter and the Prisoner of Azkaban')">
-            <img src="img/4.jpg" width="135" height="195" class="bookNo4 bb" ng-click="add(4,'Harry Potter and the Goblet of Fire')">
-            <img src="img/5.jpg" width="135" height="195" class="bookNo5 bb" ng-click="add(5,'Harry Potter and the Order of the Phoenix')">
-            <img src="img/6.png" width="135" height="195" class="bookNo6 bb" ng-click="add(6,'Harry Potter and the Half-Blood Prince')">
-            <img src="img/7.jpg" width="135" height="195" class="bookNo7 bb" ng-click="add(7,'Harry Potter and the Deathly Hallows')">
+			    	<img src="img/1.jpg" width="135" height="195" class="bookNo1 cc" ng-click="add(1,'Harry Potter and the Philosophers Stone')">
+            <img src="img/2.jpg" width="135" height="195" class="bookNo2 cc" ng-click="add(2,'Harry Potter and the Chamber of Secrets')">
+            <img src="img/3.png" width="135" height="195" class="bookNo3 cc" ng-click="add(3,'Harry Potter and the Prisoner of Azkaban')">
+            <img src="img/4.jpg" width="135" height="195" class="bookNo4 cc" ng-click="add(4,'Harry Potter and the Goblet of Fire')">
+            <img src="img/5.jpg" width="135" height="195" class="bookNo5 cc" ng-click="add(5,'Harry Potter and the Order of the Phoenix')">
+            <img src="img/6.png" width="135" height="195" class="bookNo6 cc" ng-click="add(6,'Harry Potter and the Half-Blood Prince')">
+            <img src="img/7.jpg" width="135" height="195" class="bookNo7 cc" ng-click="add(7,'Harry Potter and the Deathly Hallows')">
 			    </div>
 			</div>
       <br>
 		<div class="box2" id="book-list">
 		    <div class="list">
-		      <div class="cost cf">
+		      <div class="cost aom">
 		        <span class="left">ราคา</span>
 		        <span class="right t" ng-class="{t: length!==0}">{{gett() | currency}}</span>
 		      </div>
-          <div class="cost cf">
+          <div class="cost aom">
             <span class="left">ส่วนลด</span>
             <span class="right" ng-class="{t2: length!==0}">{{sell | currency}}</span>
             <!-- <span class="right" ng-class="{t: length!==0}">{{getDisc() | currency}}</span> -->
           </div>
-          <div class="cost cf">
+          <div class="cost aom">
 		        <span class="left">ราคาหลังหักส่วนลด</span>
             <span class="right" ng-class="{t3: length!==0}">{{gett() - sell | currency}}</span>
 		      </div>
