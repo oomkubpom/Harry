@@ -1,6 +1,4 @@
-/* global describe, before, beforeEach, afterEach,it */
 require('mocha-generators').install()
-
 var Nightmare = require('..')
 var chai = require('chai')
 var server = require('./server')
@@ -14,10 +12,8 @@ describe('TEST Buy Harry Potter', function () {
   before(function (done) {
     server.listen(7500, done)
   })
-
   describe('Test buy Harry Potter', function () {
     var nightmare
-
     beforeEach(function () {
       nightmare = Nightmare()
     })
